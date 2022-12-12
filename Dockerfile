@@ -3,7 +3,7 @@ ENV NODE_OPTIONS=--openssl-legacy-provider
 WORKDIR '/app'
 COPY package.json .
 RUN npm install
-COPY . .
+COPY frontend .
 RUN npm run build
 
 FROM nginx
